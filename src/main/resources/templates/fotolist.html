@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotos</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="photo" th:each="photo:${photos}">
+            <img th:src="${photo.img}" alt="Photo">
+            <p th:text="${photo.cameraName}"></p>
+            <p th:text="${photo.date}"></p>
+        </div>
+    </div>
+</body>
+
+</html>
